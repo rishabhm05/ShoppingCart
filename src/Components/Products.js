@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { CartState } from "../Context/Context";
 import SingleProduct from "./SingleProduct";
 
 const Products = () => {
   const {
     dispatch,
-    search,
+   
     state: { Products, filtered,pricehightolow },
   } = CartState();
-  console.log(search);
-  const[filterprice ,setfilterprice] =useState("High");
+ 
+  
   const transformProducts = () => {
     let filteredproducts = Products;
     if (filtered === "mens") {
@@ -40,7 +40,7 @@ const Products = () => {
     
     return filteredproducts;
   };
-  console.log(pricehightolow)
+  
   const handlepricefilter =(e)=>{
    console.log("yes")
    console.log(e.target.value)
