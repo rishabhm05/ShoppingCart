@@ -75,10 +75,11 @@ const Header = () => {
               size={40}
               
               onClick={() => navigate("/cart")}
-            />
-            <span className="absolute top-4 bottom-6 right-[47%]  px-1 border-black">
-              {cart.length}
-            </span>
+             
+            > <span className="absolute top-4 bottom-6 right-[47%]  px-1 border-black">
+            {cart.length}
+          </span></CgShoppingCart>
+          
           </div>
         <div className="flex flex-col  ">
        {!menutoggle? (<GiHamburgerMenu
