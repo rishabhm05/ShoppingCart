@@ -69,17 +69,17 @@ const Header = () => {
         >
           Fashion<span>.</span>
         </h1>
-        <div className=" ">
+        <div   onClick={() => navigate("/cart")}>
             <CgShoppingCart
               className=" relative mr-12 cursor-pointer "
               size={40}
               
-              onClick={() => navigate("/cart")}
-             
-            > <span className="absolute top-4 bottom-6 right-[47%]  px-1 border-black">
+            
+            > </CgShoppingCart>
+            <span className="absolute top-4 bottom-6 right-[47%]  px-1 border-black" >
             {cart.length}
-          </span></CgShoppingCart>
-          
+          </span>
+           
           </div>
         <div className="flex flex-col  ">
        {!menutoggle? (<GiHamburgerMenu
