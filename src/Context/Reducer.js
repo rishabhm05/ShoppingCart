@@ -12,6 +12,10 @@ export const CartReducer = (state, action) => {
       return { ...state, filtered: action.payload };
     case "":
       return { ...state, filtered: action.payload };
+    case "high":
+      return {...state,pricehightolow:action.payload};
+    case "low":
+      return{...state,pricehightolow:action.payload}
     case "ADD_TO_CART":
       return { ...state, cart: [...state.cart, { ...action.payload, qty: 1 }] };
     case "Remove_From_CART":

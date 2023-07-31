@@ -8,12 +8,12 @@ const SingleProduct = ({ product }) => {
   } = CartState();
 
   return (
-    <div className="md:w-[25%] mx-3 my-3 flex flex-col h-100 w-[100%]">
-      <div>
-        <img src={product.image} alt="productimage" className="w-[150px]"></img>
+    <>
+      <div className="flex-1">
+        <img src={product.image} alt="productimage" className="w-[150px] h-[200px]"></img>
       </div>
       <div>
-        <p>{product.title}</p>
+        <p >{product.title}</p>
         <p>Rs. {product.price.toFixed(0)}</p>
       </div>
       <div>
@@ -43,7 +43,8 @@ const SingleProduct = ({ product }) => {
           </button>
         )}
       </div>
-    </div>
+      </>
+  
   );
 };
 

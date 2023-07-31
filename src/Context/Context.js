@@ -14,6 +14,7 @@ const Context = ({ children }) => {
     Products: [],
     cart: [],
     filtered: "",
+    pricehightolow:"high"
   });
 
   useEffect(() => {
