@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { CartState } from "../Context/Context";
-import Products from "./Products";
+
 import {GiHamburgerMenu} from "react-icons/gi"
 import {CgShoppingCart} from "react-icons/cg"
 import {ImCross} from "react-icons/im"
