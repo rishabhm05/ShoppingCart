@@ -1,6 +1,7 @@
 import React from "react";
 import { CartState } from "../Context/Context";
-
+import {GrSubtractCircle} from 'react-icons/gr'
+import {MdAddCircleOutline} from "react-icons/md"
 import { BiTrashAlt } from "react-icons/bi";
 const SingleCartItem = ({ item }) => {
   const { dispatch } = CartState();
@@ -50,25 +51,29 @@ const SingleCartItem = ({ item }) => {
           <option value="4">4</option>
           <option value="5">5</option>
         </select> */}
-        <button
-          className=" mx-2 w-3"
+       <div
+          className="  w-[50px] flex items-center"
           onClick={() => changeqty(item.id, item.qty - 1)}
         >
-          -
-        </button>
-        <span className="mx-2 border-2 my-2 px-2 py-2 border-black">
+          {/* MInus */}
+          <GrSubtractCircle size={40}    /> 
+         
+         </div>
+        <span className=" flex items-center border-2 my-2 px-4 py-2 border-black text-center mr-2">
           {" "}
           {item.qty}
         </span>
-        <button
-          className="mx-2 w-3"
+        <div
+          className="  w-[50px]"
           onClick={() => changeqty(item.id, item.qty + 1)}
         >
-          +
-        </button>
-        <div className="w-[20%] md:mx-[40px] mx-[50px]">
+          {/* MInus */}
+          <MdAddCircleOutline size={40}    /> 
+         
+         </div>
+        <div className="w-[20%] md:mx-[40px] mx-[50px] ml-10 flex items-center justify-center ">
           <BiTrashAlt
-            size={20}
+            size={40}
             style={{ textAlign: "center", width: "100%" }}
             onClick={() => {
               dispatch({
